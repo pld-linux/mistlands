@@ -29,10 +29,10 @@ Gameplay. Some quick facts. Mistlands...
 - Game in development and as such may be unstable from time to time.
 
 %description -l pl
-Mist;ads to gra online typu RPG tworzona przez Zero Point Gameplay.
+Mistlands to gra online typu RPG tworzona przez Zero Point Gameplay.
 Troche szybkich faktów o grze...
 
-- To nie jest przeznaczona do rozgrywkli dla wielu graczy (MMORPG)
+- To nie jest gra przeznaczona do rozgrywki dla wielu graczy (MMORPG)
 - Darmowa do pobrania i grania. Wszystkie serwery tworzone przez
   graczy.
 - Gra jest w trakcie tworzenie, wiêc od czasu do czasu mo¿e byæ
