@@ -10,6 +10,11 @@ Group:		Applications/Games
 Source0:	http://dl.sourceforge.net/zerofps/%{name}-%{version}-linux.tar.bz2
 # Source-md5:	fa30bf78655bcffc5ae36c9d70e48252
 URL:		http://www.zeropointgameplay.com/mistlands/intro.html
+# spec needed
+#BuildRequires:	GLee
+BuildRequires:	OpenAL-devel
+BuildRequires:	SDL-devel >= 1.2.7
+BuildRequires:	SDL_net-devel >= 1.2.5
 # Really needed??
 #BuildRequires:	gcc >= 3.4
 BuildRequires:	libogg-devel
@@ -17,9 +22,6 @@ BuildRequires:	libvorbis-devel
 BuildRequires:	lua50-devel
 BuildRequires:	sed
 BuildRequires:	tolua++
-BuildRequires:	SDL-devel >= 1.2.7
-BuildRequires:	SDL_net-devel >= 1.2.5
-BuildRequires:	OpenAL-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
