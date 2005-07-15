@@ -12,6 +12,8 @@ Source0:	http://dl.sourceforge.net/zerofps/%{name}-%{version}-linux.tar.bz2
 URL:		http://www.zeropointgameplay.com/mistlands/intro.html
 # Really needed??
 #BuildRequires:	gcc >= 3.4
+BuildRequires:	libogg-devel
+BuildRequires:	libvorbis-devel
 BuildRequires:	lua50-devel
 BuildRequires:	sed
 BuildRequires:	tolua++
