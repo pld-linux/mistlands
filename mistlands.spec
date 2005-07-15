@@ -15,9 +15,9 @@ URL:		http://www.zeropointgameplay.com/mistlands/intro.html
 BuildRequires:	lua50-devel
 BuildRequires:	sed
 BuildRequires:	tolua++
-BuildRequires:	SDL >= 1.2.7
-BuildRequires:	SDL_net >= 1.2.5
-BuildRequires:	OpenAL
+BuildRequires:	SDL-devel >= 1.2.7
+BuildRequires:	SDL_net-devel >= 1.2.5
+BuildRequires:	OpenAL-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -47,8 +47,8 @@ cd src
 %{__make} \
 	CXX=%{__cxx} \
 	CC=%{__cc} \
-	CXXFLAGS="%{rpmcxxflags} -I%{_includedir}/lua50 -I%{_includedir}" \
-	C_ARGS="%{rpmcflags} -I%{_includedir}/lua50 -I%{_includedir}"
+	CXXFLAGS="%{rpmcxxflags} -I%{_includedir}/lua50 -I%{_includedir} -I%{_includedir}/AL" \
+	C_ARGS="%{rpmcflags} -I%{_includedir}/lua50 -I%{_includedir} -I%{_includedir}/AL"
 
 %install
 rm -rf $RPM_BUILD_ROOT
