@@ -1,12 +1,13 @@
 # TODO:
 # - make some optimizations depending on processor...
 Summary:	Mistlands - online role-playing game
+Summary(pl):	MIstlands - gra online typu RPG
 Name:		mistlands
 Version:	0.4.0
 Release:	0.1
 License:	GPL
-Group:		Games
-Source:		http://dl.sourceforge.net/sourceforge/zerofps/%{name}-%{version}-linux.tar.bz2
+Group:		Applications/Games
+Source0:	http://dl.sourceforge.net/zerofps/%{name}-%{version}-linux.tar.bz2
 # Source-md5:	fa30bf78655bcffc5ae36c9d70e48252
 URL:		http://www.zeropointgameplay.com/mistlands/intro.html
 # Really needed??
@@ -20,13 +21,22 @@ BuildRequires:	OpenAL
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Mistlands is a online role-playing game created by Zero Point Gameplay.
-Some quick facts. Mistlands...
+Mistlands is a online role-playing game created by Zero Point
+Gameplay. Some quick facts. Mistlands...
 
- * is Not a Massively Multiplayer Online Role-Playing Game (MMORPG).
- * is Open Source and code is hosted on sourceforge.
- * is free to download and play. All servers are run by the players.
- * is a game in development and as such may be unstable from time to time´.
+- is Not a Massively Multiplayer Online Role-Playing Game (MMORPG).
+- Free to download and play. All servers are run by the players.
+- Game in development and as such may be unstable from time to time.
+
+%description -l pl
+Mist;ads to gra online typu RPG tworzona przez Zero Point Gameplay.
+Troche szybkich faktów o grze...
+
+- To nie jest przeznaczona do rozgrywkli dla wielu graczy (MMORPG)
+- Darmowa do pobrania i grania. Wszystkie serwery tworzone przez
+  graczy.
+- Gra jest w trakcie tworzenie, wiêc od czasu do czasu mo¿e byæ
+  niestabilna.
 
 %prep
 %setup -q -n zerofpsv2
@@ -37,8 +47,8 @@ cd src
 %{__make} \
 	CXX=%{__cxx} \
 	CC=%{__cc} \
-	CXXFLAGS="%{rpmcxxflags} -I/usr/include/lua50 -I/usr/include" \
-	C_ARGS="%{rpmcflags} -I/usr/include/lua50 -I/usr/include"
+	CXXFLAGS="%{rpmcxxflags} -I%{_includedir}/lua50 -I%{_includedir}" \
+	C_ARGS="%{rpmcflags} -I%{_includedir}/lua50 -I%{_includedir}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
