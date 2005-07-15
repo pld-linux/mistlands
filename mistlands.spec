@@ -1,41 +1,27 @@
 #
 #
-Summary:	Mistlands
-Summary(pl):	Mistlands
+Summary:	Mistlands - online role-playing game
 Name:		mistlands
 Version:	0.4.0
 Release:	0.1
-Epoch:		0
 License:	GPL
-#Vendor:	
 Group:		Games
-#Icon:		
 Source:		http://dl.sourceforge.net/sourceforge/zerofps/%{name}-%{version}-linux.tar.bz2
 # Source-md5:	fa30bf78655bcffc5ae36c9d70e48252
 URL:		http://www.zeropointgameplay.com/mistlands/intro.html
-#BuildRequires:	autoconf
-#BuildRequires:	automake
-#BuildRequires:	libtool
-#BuildRequires:	-
-#PreReq:		-
-#Requires(pre,post):	-
-#Requires(preun):	-
-#Requires(postun):	-
-#Requires:	-
-#Provides:	-
-#Obsoletes:	-
-#Conflicts:	-
-#BuildArch:	noarch
-#ExclusiveArch:  %{ix86}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
+Mistlands is a online role-playing game created by Zero Point Gameplay.
+Some quick facts. Mistlands...
 
-%description -l pl
+ * is Not a Massively Multiplayer Online Role-Playing Game (MMORPG).
+ * is Open Source and code is hosted on sourceforge.
+ * is free to download and play. All servers are run by the players.
+ * is a game in development and as such may be unstable from time to time´.
 
 %prep
-%setup -q -n %{name}-%{version} -a 1
-#%patch0 -p1
+%setup -q -n zerofpsv2
 
 %build
 # if ac/am/* rebuilding is necessary, do it in this order and add
@@ -52,8 +38,6 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %install
 rm -rf $RPM_BUILD_ROOT
-# create directories if necessary
-#install -d $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
