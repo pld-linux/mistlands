@@ -5,7 +5,7 @@ Summary(pl):	MIstlands - gra online typu RPG
 Name:		mistlands
 Version:	0.4.0
 Release:	0.2
-License:	GPL
+License:	GPL v2
 Group:		Applications/Games
 Source0:	http://dl.sourceforge.net/zerofps/%{name}-%{version}-linux.tar.bz2
 # Source-md5:	fa30bf78655bcffc5ae36c9d70e48252
@@ -75,10 +75,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-#%doc AUTHORS CREDITS ChangeLog NEWS README THANKS TODO
-
-# if _sysconfdir != /etc:
-#%%dir %{_sysconfdir}
+%doc credits.txt readme.txt docs/*
 #%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/*
 
 #%attr(755,root,root) %{_bindir}/*
