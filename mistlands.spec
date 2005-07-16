@@ -10,17 +10,16 @@ Group:		Applications/Games
 Source0:	http://dl.sourceforge.net/zerofps/%{name}-%{version}-linux.tar.bz2
 # Source-md5:	fa30bf78655bcffc5ae36c9d70e48252
 URL:		http://www.zeropointgameplay.com/mistlands/intro.html
-BuildRequires:	GLee
+BuildRequires:	GLee-devel
 BuildRequires:	OpenAL-devel
 BuildRequires:	SDL-devel >= 1.2.7
 BuildRequires:	SDL_net-devel >= 1.2.5
 BuildRequires:	X11-OpenGL-devel-base > 6.8.2-7
 # Really needed??
-#BuildRequires:	gcc >= 3.4
+#BuildRequires:	gcc >= 5:3.4
 BuildRequires:	libogg-devel
 BuildRequires:	libvorbis-devel
 BuildRequires:	lua50-devel
-BuildRequires:	sed
 BuildRequires:	tolua++
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -34,12 +33,12 @@ Gameplay. Some quick facts. Mistlands...
 
 %description -l pl
 Mistlands to gra online typu RPG tworzona przez Zero Point Gameplay.
-Troche szybkich faktów o grze...
+Trochê szybkich faktów o grze: Mistlands...
 
 - To nie jest gra przeznaczona do rozgrywki dla wielu graczy (MMORPG)
-- Darmowa do pobrania i grania. Wszystkie serwery tworzone przez
+- Darmowa do pobrania i grania. Wszystkie serwery s± uruchamiane przez
   graczy.
-- Gra jest w trakcie tworzenie, wiêc od czasu do czasu mo¿e byæ
+- Gra jest w trakcie tworzenia, wiêc od czasu do czasu mo¿e byæ
   niestabilna.
 
 %prep
@@ -47,10 +46,9 @@ Troche szybkich faktów o grze...
 tar -jxvf src.tar.bz2
 
 %build
-cd src
-%{__make} \
-	CXX=%{__cxx} \
-	CC=%{__cc} \
+%{__make} -C src \
+	CXX="%{__cxx}" \
+	CC="%{__cc}" \
 	CXXFLAGS="%{rpmcxxflags} -I%{_includedir}/lua50 -I%{_includedir} -I%{_includedir}/AL" \
 	C_ARGS="%{rpmcflags} -I%{_includedir}/lua50 -I%{_includedir} -I%{_includedir}/AL"
 
@@ -62,16 +60,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
-
-%pre
-
-%post
-#%post	-p /sbin/ldconfig
-
-%preun
-
-%postun
-#%postun	-p /sbin/ldconfig
 
 %files
 %defattr(644,root,root,755)
