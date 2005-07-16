@@ -14,6 +14,7 @@ BuildRequires:	GLee
 BuildRequires:	OpenAL-devel
 BuildRequires:	SDL-devel >= 1.2.7
 BuildRequires:	SDL_net-devel >= 1.2.5
+BuildRequires:	X11-OpenGL-devel-base > 6.8.2-7
 # Really needed??
 #BuildRequires:	gcc >= 3.4
 BuildRequires:	libogg-devel
