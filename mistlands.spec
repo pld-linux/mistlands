@@ -4,11 +4,12 @@ Summary:	Mistlands - online role-playing game
 Summary(pl):	MIstlands - gra online typu RPG
 Name:		mistlands
 Version:	0.4.0
-Release:	0.2
+Release:	0.20050716.0.1
 License:	GPL v2
 Group:		Applications/Games
-Source0:	http://dl.sourceforge.net/zerofps/%{name}-%{version}-linux.tar.bz2
-# Source-md5:	fa30bf78655bcffc5ae36c9d70e48252
+#Source0:	http://dl.sourceforge.net/zerofps/%{name}-%{version}-linux.tar.bz2
+Source0:	http://www.zeropointgameplay.com/public_releases/%{name}-snapshot-linux.tar.bz2
+# Source0-md5:	7da2620bfd6c371c1c6165ca143c7caa
 URL:		http://www.zeropointgameplay.com/mistlands/intro.html
 BuildRequires:	GLee-devel
 BuildRequires:	OpenAL-devel
@@ -16,7 +17,7 @@ BuildRequires:	SDL-devel >= 1.2.7
 BuildRequires:	SDL_net-devel >= 1.2.5
 BuildRequires:	X11-OpenGL-devel-base > 6.8.2-7
 # Really needed??
-#BuildRequires:	gcc >= 5:3.4
+#BuildRequires:	gcc-c++ >= 5:3.4
 BuildRequires:	libogg-devel
 BuildRequires:	libvorbis-devel
 BuildRequires:	lua50-devel
