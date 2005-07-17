@@ -11,7 +11,7 @@ Group:		Applications/Games
 Source0:	http://www.zeropointgameplay.com/public_releases/%{name}-snapshot-linux.tar.bz2
 # Source0-md5:	7da2620bfd6c371c1c6165ca143c7caa
 URL:		http://www.zeropointgameplay.com/mistlands/intro.html
-BuildRequires:	GLee-devel
+BuildRequires:	GLee-devel >= 5.03
 BuildRequires:	OpenAL-devel
 BuildRequires:	SDL-devel >= 1.2.7
 BuildRequires:	SDL_net-devel >= 1.2.5
