@@ -1,7 +1,7 @@
 # TODO:
 # - make some optimizations depending on processor...
 Summary:	Mistlands - online role-playing game
-Summary(pl):	MIstlands - gra online typu RPG
+Summary(pl.UTF-8):   MIstlands - gra online typu RPG
 Name:		mistlands
 Version:	0.4.0
 Release:	0.20050716.0.1
@@ -32,14 +32,14 @@ Gameplay. Some quick facts. Mistlands...
 - Free to download and play. All servers are run by the players.
 - Game in development and as such may be unstable from time to time.
 
-%description -l pl
+%description -l pl.UTF-8
 Mistlands to gra online typu RPG tworzona przez Zero Point Gameplay.
-Trochê szybkich faktów o grze: Mistlands...
+TrochÄ™ szybkich faktÃ³w o grze: Mistlands...
 
 - To nie jest gra przeznaczona do rozgrywki dla wielu graczy (MMORPG)
-- Darmowa do pobrania i grania. Wszystkie serwery s± uruchamiane przez
+- Darmowa do pobrania i grania. Wszystkie serwery sÄ… uruchamiane przez
   graczy.
-- Gra jest w trakcie tworzenia, wiêc od czasu do czasu mo¿e byæ
+- Gra jest w trakcie tworzenia, wiÄ™c od czasu do czasu moÅ¼e byÄ‡
   niestabilna.
 
 %prep
