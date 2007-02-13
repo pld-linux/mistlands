@@ -1,7 +1,7 @@
 # TODO:
 # - make some optimizations depending on processor...
 Summary:	Mistlands - online role-playing game
-Summary(pl.UTF-8):   MIstlands - gra online typu RPG
+Summary(pl.UTF-8):	MIstlands - gra online typu RPG
 Name:		mistlands
 Version:	0.4.0
 Release:	0.20050716.0.1
